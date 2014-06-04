@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	
+	<title>Where's Waldo Pinhole</title>
+</head>
+<body>
+
+
+
+	<div class="spotlight"></div>
+
+	<div class="gallery">
+		<a href="#"><div class="background background1 current" data-fullimg="images/wheresWaldo1.jpg"></div></a>
+		<a href="#"><div class="background background2" data-fullimg="images/wheresWaldo2.jpg"></div></a>
+		<a href="#"><div class="background background3" data-fullimg="images/wheresWaldo3.jpg"></div></a>
+		<a href="#"><div class="background background4" data-fullimg="images/wheresWaldo4.jpg"></div></a>
+		<a href="#"><div class="background background5" data-fullimg="images/wheresWaldo5.jpg"></div></a>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script>
+
+		$(function() {
+		    $( ".spotlight" ).draggable();
+
+		    $("a .background").click(function(event){
+		    	event.preventDefault();
+		    	var newbkg = $(this).data("fullimg");
+		    	$(".spotlight").css({"background" : "url(" + newbkg + ")", "background-attachment" : "fixed", "background-size" : "contain"});
+		    	$(".current").removeClass("current"),
+		    	$(this).addClass("current");
+		    });
+		});
+
+
+	</script>
+</body>
+</html>
