@@ -182,6 +182,60 @@ body, html {
   background: black;
 }
 
+div.credit {
+  width: 50%;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+div.credit a {
+  text-decoration: none;
+  color: black;
+  background: white;
+  padding: 4px;
+  border: 3px solid white;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+div.credit a:hover {
+  color: white;
+  background: #2E8A68;
+}
+
+div.help {
+  margin: 200px auto;
+  width: 50%;
+  background: black;
+  border: 10px solid white;
+  border-radius: 5px;
+  position: relative;
+  z-index: 400;
+}
+div.help p {
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  padding: 50px;
+}
+div.help a {
+  margin: 0 0 20px 42%;
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background: #2D5C86;
+  border: 3px solid white;
+  border-radius: 5px;
+  padding: 15px;
+  transition: all 0.2s;
+}
+div.help a:hover {
+  background: #2E8A68;
+}
+
 div.spotlight {
   width: 150px;
   height: 150px;
@@ -208,6 +262,8 @@ div.gallery .background {
   height: 100px;
   float: left;
   margin: 0 35px;
+  border: 5px solid slategrey;
+  border-radius: 3px;
 }
 div.gallery .background1 {
   background: url(images/wheresWaldo1.jpg);
@@ -231,6 +287,4 @@ div.gallery .background5 {
 }
 div.gallery .current {
   border: 5px solid white;
-  border-radius: 3px;
-  padding: 5px;
 }

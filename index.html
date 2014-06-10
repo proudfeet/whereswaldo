@@ -4,9 +4,17 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
 	
-	<title>Where's Waldo Pinhole</title>
+	<title>Where's Waldo</title>
 </head>
 <body>
+	<div class="credit">
+		<p>Another little ditty from <a href="http://proudfeet.io">Proudfeet</a></p>
+	</div>
+
+	<div class="help">
+		<p>Click and drag the spotlight to find Waldo!</p>
+		<a href="#">Gotcha!</a>
+	</div>
 
 
 
@@ -25,12 +33,17 @@
 	<script>
 
 		$(function() {
-		    $( ".spotlight" ).draggable();
+		    $(".spotlight").draggable();
+
+		    $(".help a").click(function(event){
+		    	event.preventDefault();
+		    	$(".help").hide();
+		    });
 
 		    $("a .background").click(function(event){
 		    	event.preventDefault();
 		    	var newbkg = $(this).data("fullimg");
-		    	$(".spotlight").css({"background" : "url(" + newbkg + ")", "background-attachment" : "fixed", "background-size" : "contain"});
+		    	$(".spotlight").css({"background" : "url(" + newbkg + ")", "background-attachment" : "fixed", "background-size" : "cover"});
 		    	$(".current").removeClass("current"),
 		    	$(this).addClass("current");
 		    });
